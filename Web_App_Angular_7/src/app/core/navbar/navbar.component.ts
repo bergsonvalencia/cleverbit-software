@@ -4,7 +4,8 @@ import {
   GoogleLoginProvider,
   SocialUser
 } from 'angularx-social-login';
-import { UserAuthenticationService } from '../services';
+import { UserAuthenticationService } from '../services/user-authentication.service';
+
 
 @Component({
   selector: 'as-navbar',

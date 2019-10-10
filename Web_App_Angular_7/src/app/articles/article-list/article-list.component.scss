@@ -1,0 +1,33 @@
+thead {
+    color: #337ab7;
+  }
+  
+  .actions {
+    a {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  
+  .actions-header {
+    width: 20px;
+  }
+  
+  input[name='list-filter'] {
+    width: 200px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .articles-table {
+    margin-top: 0px;
+  
+    thead {
+      tr {
+        th {
+          border-top: none;
+        }
+      }
+    }
+  }
+  

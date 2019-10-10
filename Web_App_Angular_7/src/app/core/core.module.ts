@@ -5,11 +5,10 @@ import { RouterModule } from '@angular/router';
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { GrowlerModule } from './growler/growler.module';
 import { NavbarModule } from './navbar/navbar-module';
-import {
-  EventBusService,
-  LoggerService,
-  UserAuthenticationService
-} from './services';
+import { EventBusService } from './services/event-bus.service';
+import { UserAuthenticationService } from './services/user-authentication.service';
+import { LoggerService } from './services/logger.service';
+
 
 @NgModule({
   imports: [RouterModule, HttpClientModule, GrowlerModule, NavbarModule],

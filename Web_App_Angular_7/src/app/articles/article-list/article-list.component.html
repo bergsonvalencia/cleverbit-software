@@ -1,1 +1,48 @@
-<p>article-list works!</p>
+<div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col-md-12">
+          <span> Filter:</span>
+          <input name="list-filter" type="text" [(ngModel)]="listFilter" />
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="articles-table table-responsive">
+        <table class="table" *ngIf="articles && articles.length">
+          <thead class="">
+            <tr>
+              <th class="actions-header"></th>
+              <th>Name</th>
+              <th>Content</th>
+              <th>Year</th>
+              <th>No. of Comments(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of filteredArticles">
+              <td>
+                <div class="actions">
+                  <a [routerLink]="['/articles', item.id]" title="View Article"
+                    ><i class="fa fa-lg fa-eye text-secondary"></i
+                  ></a>
+                </div>
+              </td>
+              <td>
+                <a [routerLink]="['/articles', item.id]" title="View Article">{{
+                  item.name
+                }}</a>
+              </td>
+              <td>{{ item.content }}</td>
+              <td>{{ item.year }}</td>
+              <td>{{ item.comments.length }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    Error: {{ errorMessage }}
+  </div>
+  
