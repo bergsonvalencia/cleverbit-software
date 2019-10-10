@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <ul class="nav nav-pills">
+      <li>
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/home']"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/articles']"
+          >Articles</a
+        >
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li *ngIf="!user">
+        <span>Sign in with</span>
+        <button
+          class="btn btn-social-icon btn-google mx-1"
+          (click)="signInWithGoogle()"
+        >
+          <span class="fa fa-google"></span>oogle
+        </button>
+      </li>
+      <li *ngIf="user">
+        <span class="email" title="{{ user.name }}">{{ user.email }}</span
+        ><img class="img-responsive photo" src="{{ user.photoUrl }}" />
+        <button class="btn btn-danger" (click)="signOut()">Sign out</button>
+      </li>
+    </ul>
+  </nav>
+  
