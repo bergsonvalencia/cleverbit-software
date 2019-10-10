@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ArticleDetailComponent } from './article-detail/article-detail.component';
-import { ArticleListComponent } from './article-list/article-list.component';
-
-
+import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ArticlesRoutingModule } from './articles-routing.module';
 
 @NgModule({
-  declarations: [ArticleDetailComponent, ArticleListComponent],
-  imports: [
-    CommonModule
-  ]
+  imports: [ArticlesRoutingModule, SharedModule, ReactiveFormsModule],
+  declarations: [ArticlesRoutingModule.components]
 })
-export class ArticlesModule { }
+export class ArticlesModule {}

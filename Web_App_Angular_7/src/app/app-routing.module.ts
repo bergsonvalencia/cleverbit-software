@@ -8,10 +8,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomeModule'
   },
-  // {
-  //   path: 'articles',
-  //   loadChildren: './articles/articles.module#ArticlesModule'
-  // }
+  {
+    path: 'articles',
+    loadChildren: './articles/articles.module#ArticlesModule'
+  }
 ];
 
 @NgModule({
